@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Memory Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-blue-100 flex flex-col items-center justify-center h-screen">
+    <header class="text-center mb-8">
+        <h1 class="text-4xl font-bold">Kids Memory Game</h1>
+        <p class="mt-2 text-lg">Match the pairs of cards!</p>
+    </header>
+    <section id="start-screen" class="text-center">
+        <button id="start-button" class="bg-green-500 text-white px-4 py-2 rounded">Start Game</button>
+    </section>
+    <section id="game-grid" class="grid grid-cols-4 gap-4 hidden mt-8">
+        <!-- Cards will be dynamically generated here -->
+    </section>
+    <div id="scoreboard" class="mt-4">
+        <p>Moves: <span id="move-counter">0</span></p>
+        <p>Time: <span id="timer">0</span> seconds</p>
+    </div>
+    <div id="victory-screen" class="hidden text-center mt-8">
+        <h2 class="text-2xl font-bold">Congratulations!</h2>
+        <p>You matched all pairs!</p>
+        <button id="restart-button" class="bg-blue-500 text-white px-4 py-2 rounded">Play Again</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
