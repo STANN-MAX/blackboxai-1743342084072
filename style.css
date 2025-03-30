@@ -1,0 +1,50 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+    font-size: 2rem;
+}
+
+.card.matched {
+    cursor: default;
+    box-shadow: 0 0 0 3px #4ade80;
+}
+
+#game-grid {
+    perspective: 1000px;
+}
+
+@keyframes celebration {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.victory {
+    animation: celebration 0.5s ease-in-out 3;
+}
+
+@media (max-width: 640px) {
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+}
